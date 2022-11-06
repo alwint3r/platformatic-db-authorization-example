@@ -1,0 +1,28 @@
+{
+    "server": {
+        "logger": {
+            "level": "{PLT_SERVER_LOGGER_LEVEL}"
+        },
+        "hostname": "{PLT_SERVER_HOSTNAME}",
+        "port": "{PORT}"
+    },
+    "core": {
+        "connectionString": "{DATABASE_URL}"
+    },
+    "migrations": {
+        "dir": "./migrations",
+        "autoApply": true
+    },
+    "authorization": {
+        "jwt": {
+            "secret": "hailsatan"
+        },
+        "rules": [
+            {
+                "role": "user",
+                "entity": "book",
+                "find": true
+            }
+        ]
+    }
+}
